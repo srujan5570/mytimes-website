@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Time Private Limited</title>
   <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/hero-stats.css">
+  <link rel="stylesheet" href="assets/star-background.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/star-background.js"></script>
 </head>
 <body>
   <header>
@@ -30,31 +34,106 @@
   </header>
   <main>
     <section class="hero animated-hero">
+      <div class="star-background"></div>
       <div class="hero-bg"></div>
       <div class="hero-content">
         <h1><span class="gradient-text">Welcome to My Time</span></h1>
         <p class="hero-sub">Revolutionizing time and money management with next-gen mobile apps.</p>
-        <a class="cta animated-cta" href="apps.html">Get Started</a>
+        <div class="hero-cta-container">
+          <a class="cta animated-cta" href="apps.html">Get Started</a>
+          <a class="cta-secondary" href="contact.html">Contact Us</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-number">16+</span>
+            <span class="hero-stat-label">Apps Created</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number">1000+</span>
+            <span class="hero-stat-label">Happy Users</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number">24/7</span>
+            <span class="hero-stat-label">Support</span>
+          </div>
+        </div>
       </div>
     </section>
     <!-- App Showcase Carousel -->
     <section class="app-showcase">
       <h2>Our Top Apps</h2>
       <div class="carousel">
+        <button class="carousel-button prev" id="carousel-prev" aria-label="Previous slide">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+          </svg>
+        </button>
         <div class="carousel-track">
           <div class="carousel-item">
-            <img src="apps/my-time/screenshotes/1.jpg" alt="My Time App Screenshot">
+            <div class="app-card-image">
+              <img src="apps/my-time/screenshotes/1.jpg" alt="My Time App Screenshot">
+              <div class="app-card-badge">Popular</div>
+            </div>
             <h3>My Time</h3>
-            <p>Organize your schedule and boost productivity.</p>
+            <div class="app-card-rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-count">4.8/5</span>
+            </div>
+            <p>Organize your schedule and boost productivity with our intuitive time management app.</p>
+            <div class="app-card-features">
+              <span class="feature-tag">Calendar</span>
+              <span class="feature-tag">Reminders</span>
+              <span class="feature-tag">Goals</span>
+            </div>
             <a href="apps.html" class="showcase-link">Learn More</a>
           </div>
           <div class="carousel-item">
-            <img src="apps/easy-money/screenshots/1.jpg" alt="Easy Money App Screenshot">
+            <div class="app-card-image">
+              <img src="apps/easy-money/screenshots/1.jpg" alt="Easy Money App Screenshot">
+              <div class="app-card-badge">New</div>
+            </div>
             <h3>Easy Money</h3>
-            <p>Track expenses and manage your money with ease.</p>
+            <div class="app-card-rating">
+              <span class="stars">★★★★☆</span>
+              <span class="rating-count">4.6/5</span>
+            </div>
+            <p>Track expenses and manage your money with ease. Perfect for personal and family budgeting.</p>
+            <div class="app-card-features">
+              <span class="feature-tag">Budgeting</span>
+              <span class="feature-tag">Reports</span>
+              <span class="feature-tag">Alerts</span>
+            </div>
             <a href="apps.html" class="showcase-link">Learn More</a>
           </div>
+          <div class="carousel-item">
+            <div class="app-card-image">
+              <img src="apps/easy-money/screenshots/2.jpg" alt="Easy Money App Screenshot">
+              <div class="app-card-badge">Coming Soon</div>
+            </div>
+            <h3>Health Tracker</h3>
+            <div class="app-card-rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-count">Beta</span>
+            </div>
+            <p>Monitor your health metrics, track workouts, and achieve your fitness goals.</p>
+            <div class="app-card-features">
+              <span class="feature-tag">Fitness</span>
+              <span class="feature-tag">Nutrition</span>
+              <span class="feature-tag">Sleep</span>
+            </div>
+            <a href="apps.html" class="showcase-link">Join Waitlist</a>
+          </div>
         </div>
+        <button class="carousel-button next" id="carousel-next" aria-label="Next slide">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="carousel-dots" id="carousel-dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
       </div>
     </section>
     <!-- About Blurb -->
@@ -64,27 +143,53 @@
     </section>
     <!-- Features Section -->
     <section class="features">
-      <h2>Why Choose My Time?</h2>
+      <div class="section-header">
+        <h2>Why Choose My Time?</h2>
+        <p class="section-subtitle">Discover the advantages that set our apps apart</p>
+      </div>
       <div class="feature-list">
         <div class="feature">
-          <span class="feature-icon">⏰</span>
+          <div class="feature-icon-container">
+            <svg class="feature-icon-svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
           <h3>Time Management</h3>
-          <p>Organize your schedule and boost productivity with our smart tools.</p>
+          <p>Organize your schedule and boost productivity with our intelligent time tracking and task management tools.</p>
+          <a href="apps.html" class="feature-link">Explore Time Apps</a>
         </div>
         <div class="feature">
-          <span class="feature-icon">💸</span>
+          <div class="feature-icon-container">
+            <svg class="feature-icon-svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="1" x2="12" y2="23"/>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+          </div>
           <h3>Financial Empowerment</h3>
-          <p>Track expenses and manage your money with ease.</p>
+          <p>Track expenses, manage budgets, and gain insights into your spending habits with our comprehensive financial tools.</p>
+          <a href="apps.html" class="feature-link">Explore Money Apps</a>
         </div>
         <div class="feature">
-          <span class="feature-icon">🔒</span>
+          <div class="feature-icon-container">
+            <svg class="feature-icon-svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
           <h3>Secure & Private</h3>
-          <p>Your data is protected with industry-leading security.</p>
+          <p>Your data is protected with industry-leading security protocols and encryption. We never sell your personal information.</p>
+          <a href="legal.html" class="feature-link">Privacy Policy</a>
         </div>
         <div class="feature">
-          <span class="feature-icon">🚀</span>
+          <div class="feature-icon-container">
+            <svg class="feature-icon-svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+            </svg>
+          </div>
           <h3>Continuous Innovation</h3>
-          <p>We’re always adding new features to help you succeed.</p>
+          <p>We're constantly researching, developing, and implementing new features to help you achieve more every day.</p>
+          <a href="about.html" class="feature-link">Our Vision</a>
         </div>
       </div>
     </section>
@@ -122,7 +227,16 @@
     </section>
   </main>
   <footer>
-    &copy; 2025 My Time. All rights reserved.
+    <div class="footer-container">
+      <div class="footer-section">
+        
+    <div class="footer-bottom">
+      <p>&copy; 2025 My Time. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="legal.html">Privacy Policy</a>
+        <a href="legal.html">Terms of Service</a>
+      </div>
+    </div>
   </footer>
   <!-- Search Modal -->
   <div id="search-modal" class="search-modal">
@@ -133,4 +247,4 @@
     </div>
   </div>
 </body>
-</html> 
+</html>
