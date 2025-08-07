@@ -1189,3 +1189,105 @@ body.dark-mode .ceo-premium-stats .stat-label {
     gap: 1.5rem;
   }
 } 
+
+/* Premium Global Typography */
+body, html {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  background: var(--background);
+}
+h1, h2, h3, h4, h5, h6, .logo, .cta, .showcase-link, .feature-icon {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1.2rem;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.7rem;
+}
+
+/* Premium Card & Section Styles */
+.about, .contact, .legal, .settings, .features, .app-showcase, .about-blurb, .app-card, .feature, .carousel-item, .ceo-premium, .animation-showcase, .ceo-section {
+  background: var(--surface);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px #0A84FF11;
+  border: var(--border);
+  padding: 2.5rem 2rem;
+  margin-bottom: 2.5rem;
+  animation: fadeInUp 1.2s;
+  transition: box-shadow 0.3s, background 0.3s;
+}
+
+/* Section Fade-in Animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(60px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Premium Buttons */
+.cta, .animated-cta, .showcase-link, .download-links a {
+  border-radius: 999px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.9rem 2.2rem;
+  box-shadow: 0 4px 24px #0A84FF22;
+  letter-spacing: 0.04em;
+  transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.3s;
+  border: none;
+  outline: none;
+  margin-bottom: 0.5rem;
+}
+.cta:hover, .animated-cta:hover, .showcase-link:hover, .download-links a:hover {
+  background: #fff;
+  color: var(--primary);
+  border: 1.5px solid var(--primary);
+  transform: scale(1.05);
+  box-shadow: 0 8px 32px #0A84FF33;
+}
+
+/* Premium Links */
+a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #23234B;
+}
+
+/* Section Spacing */
+main > section, .main-section {
+  margin-bottom: 3.5rem;
+}
+
+/* Responsive Premium Adjustments */
+@media (max-width: 900px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.4rem; }
+  .about, .contact, .legal, .settings, .features, .app-showcase, .about-blurb, .app-card, .feature, .carousel-item, .ceo-premium, .animation-showcase, .ceo-section {
+    padding: 1.2rem 0.7rem;
+    border-radius: 16px;
+  }
+}
+@media (max-width: 600px) {
+  body, html {
+    font-size: 15px;
+  }
+  h1 { font-size: 1.3rem; }
+  h2 { font-size: 1.1rem; }
+  .about, .contact, .legal, .settings, .features, .app-showcase, .about-blurb, .app-card, .feature, .carousel-item, .ceo-premium, .animation-showcase, .ceo-section {
+    padding: 0.7rem 0.2rem;
+    border-radius: 10px;
+  }
+} 
