@@ -1,7 +1,39 @@
-# My Time Private Limited - Offline Website
+# My Time
 
-## Folder Structure
+## Company Overview
 
+**My Time** is a technology-driven company dedicated to empowering individuals and businesses through innovative mobile applications. Our mission is to simplify time and financial management, delivering secure, user-friendly, and impactful digital solutions for users worldwide.
+
+## Project Purpose
+
+This repository contains the official offline website for My Time, designed to showcase our mobile applications, company information, legal policies, and leadership. The website is fully responsive, modern, and optimized for both desktop and mobile users.
+
+## Features
+- **Multi-page, responsive design**
+- **Showcase of all My Time mobile apps** with screenshots and direct download links (APK, Play Store, Amazon Appstore, etc.)
+- **Premium CEO/Founder section**
+- **3D Animations page** for interactive, modern web experiences
+- **Dark mode and settings page**
+- **Comprehensive legal and privacy policy**
+- **Contact and social media integration**
+- **Fully offline-capable (except for external links)**
+
+## Legal Rights & Notices
+
+All content, trademarks, and data on this website and in our apps are the property of My Time or its licensors. Unauthorized use, copying, or distribution is strictly prohibited. Please refer to the [Legal](legal.html) page for our Privacy Policy, Terms of Service, and other legal information.
+
+- **Copyright © 2025 My Time. All rights reserved.**
+- All product names, logos, and brands are property of their respective owners.
+- This website and its content are protected by applicable intellectual property laws.
+
+## Usage
+
+- Clone or download this repository.
+- Place your app APKs and screenshots in the appropriate folders as described below.
+- Open `index.html` in your browser to view the site locally.
+- To deploy, upload all files to your web server or GitHub Pages.
+
+### Folder Structure
 ```
 MY TIME WEBSITE/
 ├── index.html
@@ -9,51 +41,46 @@ MY TIME WEBSITE/
 ├── apps.html
 ├── contact.html
 ├── legal.html
+├── settings.html
+├── 3d-animations.html
 ├── assets/
 │   ├── styles.css
-│   ├── logo.svg (optional)
+│   ├── ceo-photo.jpg (add your CEO photo here)
 │   └── js/
 │       └── main.js
 ├── apps/
-│   ├── app1/
-│   │   ├── screenshots/
-│   │   │   ├── 1.png
-│   │   │   └── 2.png
-│   │   └── app1.apk
-│   └── app2/
+│   ├── my-time/
+│   │   ├── screenshotes/
+│   │   │   ├── 1.jpg
+│   │   │   ├── 2.jpg
+│   │   │   └── ...
+│   │   └── my-time.apk
+│   └── easy-money/
 │       ├── screenshots/
-│       └── app2.apk
+│       │   ├── 1.jpg
+│       │   └── ...
+│       └── easy-money.apk
 ```
 
-## How to Update Content
+## Contributing
 
-- **App Details:**
-  - Edit `apps.html` to add or update app cards.
-  - Place screenshots in `apps/appname/screenshots/`.
-  - Place APK files in `apps/appname/`.
-  - Update download links in `apps.html`.
-  - Add Play Store, Amazon, or other links as needed.
+We welcome contributions from the community! To contribute:
+1. Fork this repository
+2. Create a new branch (`git checkout -b feature/your-feature`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin feature/your-feature`)
+5. Open a Pull Request
 
-- **Company Info:**
-  - Edit `about.html` for mission, vision, address, registration, and contact info.
-  - Edit `legal.html` for privacy policy and terms.
+All contributions are subject to review and must comply with our [Code of Conduct](legal.html) and legal policies.
 
-- **Logo:**
-  - Replace `assets/logo.svg` with your own logo if desired.
+## Contact
 
-- **Design:**
-  - Edit `assets/styles.css` for colors, fonts, and animations.
+- **Website:** [https://mytimes.app/](https://mytimes.app/)
+- **Email:** info@mytimes.app
+- **LinkedIn:** [Banavath Srujan](https://linkedin.com/in/Banavath-Srujan5191)
 
-## Adding a New App
-1. Create a new folder in `apps/` (e.g., `apps/mynewapp/`).
-2. Add screenshots to `apps/mynewapp/screenshots/`.
-3. Add the APK file to `apps/mynewapp/`.
-4. Update `apps.html` with a new app card and correct links.
-
-## Offline Usage
-- All assets are local except for external store links.
-- No internet required to view the site (except for external app store links).
+For business inquiries, legal matters, or support, please contact us via email.
 
 ---
 
-For any questions, contact info@mytimes.app 
+> This repository and website are maintained by My Time. For more information, visit our [official website](https://mytimes.app/). 
