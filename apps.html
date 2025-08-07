@@ -10,6 +10,9 @@
 <body>
   <header>
     <div class="logo">MY TIME</div>
+    <div class="search-icon" id="search-icon" tabindex="0" aria-label="Search">
+      <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" stroke="#0A84FF" stroke-width="2" fill="none"/><line x1="21" y1="21" x2="16.65" y2="16.65" stroke="#0A84FF" stroke-width="2" stroke-linecap="round"/></svg>
+    </div>
     <div class="hamburger" id="hamburger-menu">
       <span></span>
       <span></span>
@@ -71,6 +74,14 @@
   <div id="lightbox-modal" class="lightbox-modal">
     <span class="lightbox-close">&times;</span>
     <img class="lightbox-content" id="lightbox-content" src="" alt="Screenshot">
+  </div>
+  <!-- Search Modal -->
+  <div id="search-modal" class="search-modal">
+    <div class="search-modal-content">
+      <button id="search-close" class="search-close" aria-label="Close Search">&times;</button>
+      <input id="search-input" class="search-input" type="text" placeholder="Search the website..." />
+      <div class="search-results">(Search results will appear here)</div>
+    </div>
   </div>
 </body>
 </html> 

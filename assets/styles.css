@@ -1307,3 +1307,112 @@ main > section, .main-section {
     border-radius: 10px;
   }
 } 
+
+/* Search Icon in Header */
+.search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.2rem;
+  cursor: pointer;
+  z-index: 202;
+  background: none;
+  border: none;
+  outline: none;
+  transition: background 0.2s;
+}
+.search-icon:focus, .search-icon:hover {
+  background: #E0E6ED;
+  border-radius: 50%;
+}
+
+/* Search Modal Overlay */
+.search-modal {
+  display: none;
+  position: fixed;
+  z-index: 3000;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: rgba(24,26,42,0.85);
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s;
+}
+.search-modal.open {
+  display: flex;
+}
+.search-modal-content {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px #0A84FF33;
+  padding: 2.5rem 2rem 2rem 2rem;
+  min-width: 320px;
+  max-width: 90vw;
+  position: relative;
+  text-align: center;
+}
+.search-input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 1.5px solid #E0E6ED;
+  margin-bottom: 1.5rem;
+  outline: none;
+  transition: border 0.2s;
+}
+.search-input:focus {
+  border: 1.5px solid #0A84FF;
+}
+.search-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #0A84FF;
+  cursor: pointer;
+  z-index: 1;
+  transition: color 0.2s;
+}
+.search-close:hover {
+  color: #23234B;
+}
+.search-results {
+  color: #23234B;
+  font-size: 1rem;
+  min-height: 2rem;
+}
+
+body.dark-mode .search-modal-content {
+  background: #23234B;
+  color: #F5F7FA;
+}
+body.dark-mode .search-input {
+  background: #181A2A;
+  color: #F5F7FA;
+  border: 1.5px solid #23234B;
+}
+body.dark-mode .search-input:focus {
+  border: 1.5px solid #0A84FF;
+}
+body.dark-mode .search-close {
+  color: #0A84FF;
+}
+body.dark-mode .search-close:hover {
+  color: #fff;
+}
+body.dark-mode .search-results {
+  color: #F5F7FA;
+}
+
+@media (max-width: 600px) {
+  .search-modal-content {
+    min-width: 90vw;
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+  }
+  .search-input {
+    font-size: 1rem;
+    padding: 0.7rem;
+  }
+} 
