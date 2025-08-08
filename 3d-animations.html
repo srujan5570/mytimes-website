@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Animations - My Time</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/3d-animations-extended.css">
+  <link rel="stylesheet" href="assets/css/3d-animations-additional.css">
+  <link rel="stylesheet" href="assets/css/3d-animations-final.css">
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/3d-animations-extended.js"></script>
+  <script defer src="assets/js/3d-animations-additional.js"></script>
+  <script defer src="assets/js/3d-animations-final.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">MY TIME</div>
+    <div class="search-icon" id="search-icon" tabindex="0" aria-label="Search">
+      <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" stroke="#0A84FF" stroke-width="2" fill="none"/><line x1="21" y1="21" x2="16.65" y2="16.65" stroke="#0A84FF" stroke-width="2" stroke-linecap="round"/></svg>
+    </div>
+    <div class="hamburger" id="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="apps.html">Apps</a>
+      <a href="contact.html">Contact</a>
+      <a href="legal.html">Legal</a>
+      <a href="settings.html">Settings</a>
+      <a href="3d-animations.html">3D Animations</a>
+    </nav>
+  </header>
+  <main>
+    <section class="animations-hero">
+      <div class="animations-hero-content">
+        <h1>3D Animations</h1>
+        <p>Experience cutting-edge 3D animations and interactive elements</p>
+        <div class="animations-cta">
+          <a href="#animation-showcase" class="btn primary-btn">Explore Animations</a>
+          <a href="contact.html" class="btn secondary-btn">Contact for Custom 3D</a>
+        </div>
+      </div>
+      <div class="animations-hero-visual">
+        <div id="hero-canvas-container"></div>
+      </div>
+    </section>
+    
+    <section id="animation-showcase" class="animation-showcase">
+      <div class="section-header">
+        <h2>Interactive 3D Elements</h2>
+        <p>Explore our collection of interactive 3D elements and animations</p>
+      </div>
+      
+      <div class="animation-grid">
+        <div class="animation-card" id="rotating-cube">
+          <div class="animation-card-visual">
+            <div class="cube">
+              <div class="face front">MY TIME</div>
+              <div class="face back">APPS</div>
+              <div class="face right">3D</div>
+              <div class="face left">WEB</div>
+              <div class="face top">DESIGN</div>
+              <div class="face bottom">TECH</div>
+            </div>
+          </div>
+          <div class="animation-card-content">
+            <h3>Rotating Cube</h3>
+            <p>Interactive 3D cube with custom textures and smooth rotation animations</p>
+            <div class="animation-controls">
+              <button class="control-btn" id="cube-speed-up">Speed Up</button>
+              <button class="control-btn" id="cube-speed-down">Slow Down</button>
+              <button class="control-btn" id="cube-reset">Reset</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animation-card" id="floating-sphere">
+          <div class="animation-card-visual">
+            <div class="sphere"></div>
+          </div>
+          <div class="animation-card-content">
+            <h3>Floating Sphere</h3>
+            <p>Mesmerizing sphere with dynamic lighting and particle effects</p>
+            <div class="animation-controls">
+              <button class="control-btn" id="sphere-color">Change Color</button>
+              <button class="control-btn" id="sphere-particles">Toggle Particles</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animation-card" id="pulse-ring">
+          <div class="animation-card-visual">
+            <div class="pulse-container">
+              <div class="pulse-ring"></div>
+              <div class="pulse-ring"></div>
+              <div class="pulse-ring"></div>
+            </div>
+          </div>
+          <div class="animation-card-content">
+            <h3>Pulse Rings</h3>
+            <p>Hypnotic pulsating rings with customizable wave patterns</p>
+            <div class="animation-controls">
+              <button class="control-btn" id="pulse-speed">Change Speed</button>
+              <button class="control-btn" id="pulse-color">Change Color</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animation-card" id="particle-system">
+          <div class="animation-card-visual">
+            <div class="particles-container" id="particles-container"></div>
+          </div>
+          <div class="animation-card-content">
+            <h3>Particle System</h3>
+            <p>Interactive particle system that responds to mouse movement</p>
+            <div class="animation-controls">
+              <button class="control-btn" id="particles-density">Change Density</button>
+              <button class="control-btn" id="particles-reset">Reset</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="section-header">
+        <h2>Advanced 3D Animations</h2>
+        <p>Explore our cutting-edge 3D animations showcasing the best of our capabilities</p>
+      </div>
+      
+      <div class="animation-grid">
+        <div class="animation-card" id="text-3d-animation">
+          <div class="animation-card-visual">
+            <div class="text-3d">MY TIME</div>
+          </div>
+          <div class="animation-card-content">
+            <h3>3D Text Animation</h3>
+            <p>Dynamic 3D text with perspective and floating animation effects</p>
+            <div class="animation-controls">
+              <button class="control-btn" id="text-3d-color">Change Color</button>
+              <button class="control-btn" id="text-3d-speed">Change Speed</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animation-card" id="hologram-effect">
+          <div class="animation-card-visual">
+            <div class="hologram">
+              <div class="hologram-content"></div>
+            </div>
+          </div>
+          <div class="animation-card-content">
+            <h3>Hologram Effect</h3>
+            <p>Futuristic hologram projection with glowing edges and pulsating core</p>
+            <div class="animation-controls">
+              <button class="control-btn" id="hologram-intensity">Intensity</button>
+              <button class="control-btn" id="hologram-size">Change Size</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animation-card" id="dna-helix">
+          <div class="animation-card-visual">
+            <div class="dna-container">
+              <div class="dna-strand">
+                <div class="dna-step" style="top: 0px;">
+                  <div class="dna-left"></div>
+                  <div class="dna-right"></div>
+                  <div class="dna-connection"></div>
+                </div>
+                <div class="dna-step" style="top: 20px;">
+                  <div class="dna-left"></div>
+                  <div class="dna-right"></div>
+                  <div class="dna-connection"></div>
+                </div>
+                <div class="dna-step" style="top: 40px;">
+                  <div class="dna-left"></div>
+                  <div class="dna-right"></div>
+                  <div class="dna-connection"></div>
+                </div>
+                <div class="dna-step" style="top: 60px;">
+                  <div class="dna-left"></div>
+                  <div class="dna-right"></div>
+                  <div class="dna-connection"></div>
+                </div>
+                <div class="dna-step" style="top: 80px;">
+                  <div class="dna-left"></div>
+                  <div class="dna-right"></div>
+                  <div class="dna-connection"></div>
+                </div>
+                <div class="dna-step" style="top: 100px;">
+                  <div class="dna-left"></div>
+                  <div class="dna-right"></div>
+                  <div class="dna-connection"></div>
+                </div>
+                <div class="dna-step" style="top: 120px;">
+                  <div class="dna-left"></div>
+                  <div class="dna-right"></div>
+                  <div class="dna-connection"></div>
+                </div>
+                <div class="dna-step" style="top: 140px;">
+                  <div class="dna-left"></div>
+                  <div class="dna-right"></div>
+                  <div class="dna-connection"></div>
+                </div>
+                <div class="dna-step" style="top: 160px;">
+                  <div class="dna-left"></div>
+                  <div class="dna-right"></div>
+                  <div class="dna-connection"></div>
+                </div>
+                <div class="dna-step" style="top: 180px;">
+                  <div class="dna-left"></div>
+                  <div class="dna-right"></div>
+                  <div class="dna-connection"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="animation-card-content">
+            <h3>DNA Helix</h3>
+            <p>Rotating double helix structure with interactive controls</p>
+            <div class="animation-controls">
+              <button class="control-btn" id="dna-rotation">Rotation</button>
+              <button class="control-btn" id="dna-color">Change Color</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animation-card" id="floating-islands">
+          <div class="animation-card-visual">
+            <div class="floating-islands">
+              <div class="island"></div>
+              <div class="island"></div>
+              <div class="island"></div>
+            </div>
+          </div>
+          <div class="animation-card-content">
+            <h3>Floating Islands</h3>
+            <p>Miniature 3D islands that float and rotate in a parallax effect</p>
+            <div class="animation-controls">
+              <button class="control-btn" id="islands-add">Add Island</button>
+              <button class="control-btn" id="islands-weather">Weather</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animation-card" id="neon-glow">
+          <div class="animation-card-visual">
+            <div class="neon-container">
+              <div class="neon-text">GLOW</div>
+            </div>
+          </div>
+          <div class="animation-card-content">
+            <h3>Neon Glow</h3>
+            <p>Vibrant neon text effect with pulsating glow and shadow</p>
+            <div class="animation-controls">
+              <button class="control-btn" id="neon-text">Change Text</button>
+              <button class="control-btn" id="neon-color">Change Color</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animation-card" id="particle-wave">
+          <div class="animation-card-visual">
+            <canvas id="wave-canvas" width="300" height="250"></canvas>
+          </div>
+          <div class="animation-card-content">
+            <h3>Particle Wave</h3>
+            <p>Undulating wave of particles that respond to audio input</p>
+            <div class="animation-controls">
+              <button class="control-btn" id="wave-amplitude">Amplitude</button>
+              <button class="control-btn" id="wave-frequency">Frequency</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animation-card" id="geometric-morph">
+          <div class="animation-card-visual">
+            <canvas id="morph-canvas" width="300" height="250"></canvas>
+          </div>
+          <div class="animation-card-content">
+            <h3>Geometric Morphing</h3>
+            <p>Smooth transitions between different geometric shapes</p>
+            <div class="animation-controls">
+              <button class="control-btn" id="morph-shape">Change Shape</button>
+              <button class="control-btn" id="morph-speed">Change Speed</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animation-card" id="galaxy-simulation">
+          <div class="animation-card-visual">
+            <canvas id="galaxy-canvas" width="300" height="250"></canvas>
+          </div>
+          <div class="animation-card-content">
+            <h3>Galaxy Simulation</h3>
+            <p>Realistic simulation of a spiral galaxy with thousands of stars</p>
+            <div class="animation-controls">
+              <button class="control-btn" id="galaxy-zoom">Zoom</button>
+              <button class="control-btn" id="galaxy-rotation">Rotation</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animation-card" id="fluid-simulation">
+          <div class="animation-card-visual">
+            <canvas id="fluid-canvas" width="300" height="250"></canvas>
+          </div>
+          <div class="animation-card-content">
+            <h3>Fluid Simulation</h3>
+            <p>Real-time fluid dynamics simulation with interactive controls</p>
+            <div class="animation-controls">
+              <button class="control-btn" id="fluid-viscosity">Viscosity</button>
+              <button class="control-btn" id="fluid-color">Change Color</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animation-card" id="terrain-generator">
+          <div class="animation-card-visual">
+            <canvas id="terrain-canvas" width="300" height="250"></canvas>
+          </div>
+          <div class="animation-card-content">
+            <h3>Terrain Generator</h3>
+            <p>Procedurally generated 3D landscapes with realistic lighting</p>
+            <div class="animation-controls">
+              <button class="control-btn" id="terrain-generate">Generate</button>
+              <button class="control-btn" id="terrain-height">Height</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="section-header">
+        <h2>Interactive Media Animations</h2>
+        <p>Explore our interactive media animations with real-time effects</p>
+      </div>
+      
+      <div class="animation-grid">
+        <div class="animation-card" id="audio-visualizer">
+          <div class="animation-card-visual">
+            <canvas id="audio-canvas" width="300" height="250"></canvas>
+          </div>
+          <div class="animation-card-content">
+            <h3>Audio Visualizer</h3>
+            <p>Dynamic audio visualization with responsive frequency bars</p>
+            <div class="animation-controls">
+              <button class="control-btn" id="audio-reset">Reset</button>
+              <button class="control-btn" id="audio-bars">Smooth</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animation-card" id="raining-code">
+          <div class="animation-card-visual">
+            <canvas id="code-canvas" width="300" height="250"></canvas>
+          </div>
+          <div class="animation-card-content">
+            <h3>Digital Rain</h3>
+            <p>Matrix-style falling code animation with customizable effects</p>
+            <div class="animation-controls">
+              <button class="control-btn" id="code-color">Change Color</button>
+              <button class="control-btn" id="code-speed">Speed Up</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animation-card" id="virtual-city">
+          <div class="animation-card-visual">
+            <canvas id="city-canvas" width="300" height="250"></canvas>
+          </div>
+          <div class="animation-card-content">
+            <h3>Virtual City</h3>
+            <p>Procedurally generated cityscape with day/night cycle</p>
+            <div class="animation-controls">
+              <button class="control-btn" id="city-time">Toggle Time</button>
+              <button class="control-btn" id="city-regenerate">Regenerate</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animation-card" id="particle-explosion">
+          <div class="animation-card-visual">
+            <canvas id="explosion-canvas" width="300" height="250"></canvas>
+          </div>
+          <div class="animation-card-content">
+            <h3>Particle Explosion</h3>
+            <p>Interactive particle explosion system with physics simulation</p>
+            <div class="animation-controls">
+              <button class="control-btn" id="explosion-trigger">Explode</button>
+              <button class="control-btn" id="explosion-reset">Reset</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animation-card" id="water-ripple">
+          <div class="animation-card-visual">
+            <canvas id="ripple-canvas" width="300" height="250"></canvas>
+          </div>
+          <div class="animation-card-content">
+            <h3>Water Ripple</h3>
+            <p>Realistic water surface simulation with interactive ripple effects</p>
+            <div class="animation-controls">
+              <button class="control-btn" id="ripple-damping">Damping</button>
+              <button class="control-btn" id="ripple-reset">Reset</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="section-header">
+        <h2>Advanced Simulation Effects</h2>
+        <p>Explore our most sophisticated 3D simulations and effects</p>
+      </div>
+      
+      <div class="animation-grid">
+        <div class="animation-card" id="liquid-metal">
+          <div class="animation-card-visual">
+            <canvas id="liquid-canvas" width="300" height="250"></canvas>
+          </div>
+          <div class="animation-card-content">
+            <h3>Liquid Metal</h3>
+            <p>Fluid metallic simulation with dynamic particle connections</p>
+            <div class="animation-controls">
+              <button class="control-btn" id="liquid-reset">Reset</button>
+              <button class="control-btn" id="liquid-color">Change Metal</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animation-card" id="fire-simulation">
+          <div class="animation-card-visual">
+            <canvas id="fire-canvas" width="300" height="250"></canvas>
+          </div>
+          <div class="animation-card-content">
+            <h3>Fire Simulation</h3>
+            <p>Realistic fire particle system with dynamic color gradients</p>
+            <div class="animation-controls">
+              <button class="control-btn" id="fire-intensity">Intensity</button>
+              <button class="control-btn" id="fire-reset">Reset</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animation-card" id="clockwork-mechanism">
+          <div class="animation-card-visual">
+            <canvas id="clockwork-canvas" width="300" height="250"></canvas>
+          </div>
+          <div class="animation-card-content">
+            <h3>Clockwork Mechanism</h3>
+            <p>Intricate gear system with realistic mechanical movement</p>
+            <div class="animation-controls">
+              <button class="control-btn" id="clockwork-speed">Speed</button>
+              <button class="control-btn" id="clockwork-reverse">Reverse</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animation-card" id="neural-network">
+          <div class="animation-card-visual">
+            <canvas id="neural-canvas" width="300" height="250"></canvas>
+          </div>
+          <div class="animation-card-content">
+            <h3>Neural Network</h3>
+            <p>Visual representation of neural network with signal propagation</p>
+            <div class="animation-controls">
+              <button class="control-btn" id="neural-speed">Speed</button>
+              <button class="control-btn" id="neural-reset">Reset</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="animation-card" id="portal-effect">
+          <div class="animation-card-visual">
+            <canvas id="portal-canvas" width="300" height="250"></canvas>
+          </div>
+          <div class="animation-card-content">
+            <h3>Portal Effect</h3>
+            <p>Mesmerizing portal animation with swirling particles</p>
+            <div class="animation-controls">
+              <button class="control-btn" id="portal-color">Color</button>
+              <button class="control-btn" id="portal-size">Size</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="animation-showcase-cta">
+        <h3>Need Custom 3D Animations?</h3>
+        <p>We can create custom 3D animations for your website or application</p>
+        <a href="contact.html" class="btn primary-btn">Contact Us</a>
+      </div>
+    </section>
+    
+    <section class="animation-tech">
+      <div class="section-header">
+        <h2>Our 3D Technology</h2>
+        <p>Powered by cutting-edge web technologies</p>
+      </div>
+      
+      <div class="tech-grid">
+        <div class="tech-card">
+          <div class="tech-icon">
+            <svg viewBox="0 0 24 24" width="48" height="48"><path fill="currentColor" d="M12 0L1.608 6v12L12 24l10.392-6V6L12 0zm8.376 16.969l-8.376 4.838-8.376-4.838V7.031l8.376-4.838 8.376 4.838v9.938z"/><path fill="currentColor" d="M12 3.048L5.167 7.031v7.938L12 18.952l6.833-3.983V7.031L12 3.048zm4.798 10.351l-4.798 2.798-4.798-2.798V6.601l4.798-2.798 4.798 2.798v6.798z"/></svg>
+          </div>
+          <h3>Three.js</h3>
+          <p>JavaScript 3D library that makes WebGL simpler</p>
+        </div>
+        
+        <div class="tech-card">
+          <div class="tech-icon">
+            <svg viewBox="0 0 24 24" width="48" height="48"><path fill="currentColor" d="M17.813 22.502c-.089.047-.084.066.005.021a.228.228 0 0 0 .07-.047c0-.016-.002-.014-.075.026zm.178-.094c-.042.033-.042.035.009.009.028-.014.052-.03.052-.035 0-.019-.012-.014-.061.026zm.117-.071c-.042.033-.042.035.009.009.028-.014.052-.03.052-.035 0-.019-.012-.014-.061.026zm.117-.07c-.042.033-.042.035.009.009.028-.014.052-.03.052-.035 0-.019-.012-.014-.061.026zm.162-.105c-.082.052-.108.087-.035.047.052-.03.136-.094.122-.096a.466.466 0 0 0-.087.049zM11.214.006c-.052.005-.216.021-.364.033-3.408.307-6.601 2.146-8.623 4.973a11.876 11.876 0 0 0-2.118 5.243c-.096.659-.108.854-.108 1.748s.012 1.088.108 1.748c.652 4.506 3.859 8.292 8.208 9.695.779.251 1.6.422 2.533.525.364.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.206-.106.246-.134.218-.157-.019-.014-.899-1.194-1.955-2.62l-1.919-2.592-2.404-3.558a332.64 332.64 0 0 0-2.421-3.556c-.009-.002-.019 1.579-.023 3.509-.007 3.38-.009 3.516-.052 3.596a.424.424 0 0 1-.206.213c-.075.038-.141.045-.495.045H7.81l-.108-.068a.442.442 0 0 1-.157-.171l-.049-.106.005-4.703.007-4.705.073-.091a.637.637 0 0 1 .174-.143c.096-.047.134-.052.54-.052.479 0 .558.019.683.155a466.83 466.83 0 0 1 2.132 3.25l2.351 3.598 2.518 3.857a1569.74 1569.74 0 0 0 2.516 3.84l.042-.028a11.78 11.78 0 0 0 2.196-2.301 11.94 11.94 0 0 0 2.602-6.884c.096-.659.108-.854.108-1.748s-.012-1.088-.108-1.748C23.122 5.46 19.969 1.7 15.697.26 15.126.108 14.41.024 13.692.01c-.22-.004-.484-.004-.693 0zM14.3 6.838a.473.473 0 0 1 .262.34c.009.061.014 2.023.012 4.361l-.007 4.252-.49.77-2.993-4.591-2.984-4.577v4.151c0 2.638.009 4.175.026 4.21.042.096.155.171.272.189.054.007.986.012 2.074.01l1.979-.003.089-.057a.43.43 0 0 0 .109-.111l.038-.075V11.07c0-2.285.004-4.393.009-4.683l.007-.527.052-.058a.347.347 0 0 1 .133-.116c.07-.033.093-.035.645-.035.546 0 .576.002.647.033z"/></svg>
+          </div>
+          <h3>Next.js</h3>
+          <p>React framework for production-grade applications</p>
+        </div>
+        
+        <div class="tech-card">
+          <div class="tech-icon">
+            <svg viewBox="0 0 24 24" width="48" height="48"><path fill="currentColor" d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38a2.167 2.167 0 0 0-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44a23.476 23.476 0 0 0-3.107-.534A23.892 23.892 0 0 0 12.769 4.7c1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442a22.73 22.73 0 0 0-3.113.538 15.02 15.02 0 0 1-.254-1.42c-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87a25.64 25.64 0 0 1-4.412.005 26.64 26.64 0 0 1-1.183-1.86c-.372-.64-.71-1.29-1.018-1.946a25.17 25.17 0 0 1 1.013-1.954c.38-.66.773-1.286 1.18-1.868A25.245 25.245 0 0 1 12 8.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933a25.952 25.952 0 0 0-1.345-2.32zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493a23.966 23.966 0 0 0-1.1-2.98c.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98a23.142 23.142 0 0 0-1.086 2.964c-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39a25.819 25.819 0 0 0 1.341-2.338zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143a22.005 22.005 0 0 1-2.006-.386c.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295a1.185 1.185 0 0 1-.553-.132c-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z"/></svg>
+          </div>
+          <h3>React</h3>
+          <p>JavaScript library for building user interfaces</p>
+        </div>
+        
+        <div class="tech-card">
+          <div class="tech-icon">
+            <svg viewBox="0 0 24 24" width="48" height="48"><path fill="currentColor" d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
+          </div>
+          <h3>JavaScript</h3>
+          <p>The programming language of the web</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        
+          
+      
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 My Time. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="legal.html">Privacy Policy</a>
+        <a href="legal.html">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+  <!-- Search Modal -->
+  <div id="search-modal" class="search-modal">
+    <div class="search-modal-content">
+      <button id="search-close" class="search-close" aria-label="Close Search">&times;</button>
+      <input id="search-input" class="search-input" type="text" placeholder="Search the website..." />
+      <div class="search-results">(Search results will appear here)</div>
+    </div>
+  </div>
+</body>
+</html>
