@@ -1,0 +1,316 @@
+/* Extended 3D Animations CSS */
+
+/* Animation Grid Layout */
+.animation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+/* Advanced Animation Cards */
+.animation-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.animation-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(10, 132, 255, 0.2);
+}
+
+.animation-card-visual {
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animation-card-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.animation-card-content h3 {
+  margin-top: 0;
+  color: var(--text-main);
+  font-size: 1.5rem;
+}
+
+.animation-card-content p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.animation-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.control-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.control-btn:hover {
+  background: #0062cc;
+  transform: translateY(-2px);
+}
+
+/* New Animation Styles */
+
+/* 3D Text Animation */
+.text-3d {
+  position: relative;
+  perspective: 1000px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--primary);
+  text-align: center;
+  text-transform: uppercase;
+  transform-style: preserve-3d;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotateX(0) rotateZ(0); }
+  25% { transform: translateY(-10px) rotateX(5deg) rotateZ(1deg); }
+  50% { transform: translateY(0) rotateX(0) rotateZ(0); }
+  75% { transform: translateY(10px) rotateX(-5deg) rotateZ(-1deg); }
+}
+
+/* Hologram Effect */
+.hologram {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hologram-content {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform-style: preserve-3d;
+  animation: hologramRotate 15s linear infinite;
+}
+
+.hologram-content::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(10, 132, 255, 0.5) 0%, rgba(10, 132, 255, 0.2) 50%, transparent 70%);
+  box-shadow: 0 0 20px rgba(10, 132, 255, 0.8);
+  animation: hologramPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes hologramRotate {
+  0% { transform: rotateY(0) rotateX(20deg); }
+  100% { transform: rotateY(360deg) rotateX(20deg); }
+}
+
+@keyframes hologramPulse {
+  0% { opacity: 0.5; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* DNA Helix */
+.dna-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dna-strand {
+  position: relative;
+  width: 20px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: dnaRotate 10s linear infinite;
+}
+
+.dna-step {
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  transform-style: preserve-3d;
+}
+
+.dna-left, .dna-right {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 10px rgba(10, 132, 255, 0.8);
+}
+
+.dna-left {
+  left: -30px;
+}
+
+.dna-right {
+  right: -30px;
+}
+
+.dna-connection {
+  position: absolute;
+  width: 70px;
+  height: 2px;
+  background: rgba(10, 132, 255, 0.5);
+  left: -30px;
+  top: 4px;
+}
+
+@keyframes dnaRotate {
+  0% { transform: rotateX(0); }
+  100% { transform: rotateX(360deg); }
+}
+
+/* Floating Islands */
+.floating-islands {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+
+.island {
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  background: linear-gradient(to bottom, #8a5a44, #5d3a2c);
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.island::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 10px;
+  width: 40px;
+  height: 20px;
+  background: linear-gradient(to bottom, #4caf50, #2e7d32);
+  border-radius: 50% 50% 45% 45%;
+}
+
+.island:nth-child(1) {
+  top: 30%;
+  left: 30%;
+  animation: floatIsland 8s ease-in-out infinite;
+}
+
+.island:nth-child(2) {
+  top: 60%;
+  left: 50%;
+  animation: floatIsland 7s ease-in-out infinite 1s;
+}
+
+.island:nth-child(3) {
+  top: 40%;
+  left: 70%;
+  animation: floatIsland 9s ease-in-out infinite 2s;
+}
+
+@keyframes floatIsland {
+  0%, 100% { transform: translateY(0) rotateX(10deg) rotateZ(0); }
+  50% { transform: translateY(-20px) rotateX(15deg) rotateZ(5deg); }
+}
+
+/* Neon Glow */
+.neon-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #181A2A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.neon-text {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 
+    0 0 5px #0A84FF,
+    0 0 10px #0A84FF,
+    0 0 20px #0A84FF,
+    0 0 40px #0A84FF;
+  animation: neonPulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neonPulse {
+  0% { opacity: 0.8; text-shadow: 0 0 5px #0A84FF, 0 0 10px #0A84FF, 0 0 20px #0A84FF, 0 0 40px #0A84FF; }
+  100% { opacity: 1; text-shadow: 0 0 10px #0A84FF, 0 0 20px #0A84FF, 0 0 30px #0A84FF, 0 0 50px #0A84FF, 0 0 70px #0A84FF; }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .animation-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .animation-card-visual {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .animation-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dark Mode Styles */
+.dark-mode .animation-card {
+  background: var(--secondary);
+}
+
+.dark-mode .animation-card-content h3 {
+  color: #fff;
+}
+
+.dark-mode .animation-card-content p {
+  color: #bbb;
+}
+
+.dark-mode .control-btn {
+  background: #0A84FF;
+}
+
+.dark-mode .control-btn:hover {
+  background: #3a9bff;
+}

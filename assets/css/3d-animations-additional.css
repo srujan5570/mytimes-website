@@ -1,0 +1,102 @@
+/* 3D Animations Additional Styles */
+
+/* Interactive Media Animations Section */
+.section-header {
+  text-align: center;
+  margin: 4rem 0 2rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: var(--text-main);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Audio Visualizer */
+#audio-visualizer .animation-card-visual {
+  background: var(--surface);
+  overflow: hidden;
+  position: relative;
+}
+
+#audio-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* Digital Rain (Matrix Effect) */
+#raining-code .animation-card-visual {
+  background: var(--surface);
+  overflow: hidden;
+}
+
+#code-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* Virtual City */
+#virtual-city .animation-card-visual {
+  background: var(--surface);
+  overflow: hidden;
+}
+
+#city-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* Particle Explosion */
+#particle-explosion .animation-card-visual {
+  background: var(--surface);
+  overflow: hidden;
+}
+
+#explosion-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* Water Ripple */
+#water-ripple .animation-card-visual {
+  background: var(--surface);
+  overflow: hidden;
+}
+
+#ripple-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* Dark Mode Adjustments */
+@media (prefers-color-scheme: dark) {
+  .section-header h2 {
+    color: var(--primary);
+  }
+  
+  .section-header p {
+    color: var(--text-light);
+  }
+  
+  .animation-card-visual {
+    background: var(--secondary) !important;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .section-header p {
+    font-size: 1rem;
+  }
+}
